@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="news.lanqiudi.com.news.activity.UploadImageActivity">
+    <ImageView
+        android:layout_width="@dimen/dp_180"
+        android:src="@drawable/logo_dqd"
+        android:layout_height="@dimen/dp_180"
+        android:layout_centerHorizontal="true"
+        android:onClick="imageClick"
+        android:id="@+id/image"/>
+    <news.lanqiudi.com.news.customs.banner.BannerLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:id="@+id/banner"
+        android:layout_below="@+id/image"
+        app:centerScale="1.3"
+        app:itemSpace="20"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_rl"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/app_theme_color">
+
+        <com.teach.news10.design.RoundImage
+            android:id="@+id/round_image"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/lib_icon_user_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lay_up_shot"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_layout"
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/bottom_view"/>
+    <com.teach.news10.design.MyBottomView
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:changeDrawable="true"
+        app:changeTextColor="true"
+        app:textSelectedColor="@color/app_theme_color"
+        app:textUnSelectedColor="@color/grey_first"
+        app:bottomTextSize="@dimen/sp_6"
+        app:textFirst="@string/first_page"
+        app:textSecond="@string/match"
+        app:textThird="@string/circle"
+        app:textFourth="@string/data"
+        app:bottomNum="4"
+        app:imageUnSelectedFirst="@drawable/lib_icon_tab1_normal"
+        app:imageUnSelectedSecond="@drawable/lib_icon_tab2_normal"
+        app:imageUnSelectedThird="@drawable/lib_icon_tab3_normal"
+        app:imageUnSelectedFourth="@drawable/lib_icon_tab4_normal"
+        app:imageSelectedFirst="@drawable/lib_icon_tab1_selected"
+        app:imageSelectedSecond="@drawable/lib_icon_tab2_selected"
+        app:imageSelectedThird="@drawable/lib_icon_tab3_selected"
+        app:imageSelectedFourth="@drawable/lib_icon_tab4_selected"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

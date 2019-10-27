@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/father_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/left_team_logo_rl"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_20"
+            android:layout_below="@+id/left_vertical_line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_3">
+
+            <ImageView
+                android:id="@+id/left_team_logo"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/rank_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_4"
+                android:text="9"
+                android:textColor="@color/grey_second"
+                android:textSize="@dimen/sp_8" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/left_team_name"
+            android:layout_width="@dimen/dp_41"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/left_team_logo_rl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_marginRight="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_3"
+            android:background="@color/blue_theme"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/dp_1"
+            android:paddingTop="@dimen/dp_1"
+            android:singleLine="true"
+            android:text="勇士"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_9" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/right_team_logo_rl"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_20"
+            android:layout_below="@+id/right_vertical_line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_3">
+
+            <ImageView
+                android:id="@+id/right_team_logo"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/rank_num_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_4"
+                android:text="9"
+                android:textColor="@color/grey_second"
+                android:textSize="@dimen/sp_8" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/right_team_name"
+            android:layout_width="@dimen/dp_41"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/right_team_logo_rl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_marginRight="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_3"
+            android:background="@color/blue_theme"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/dp_1"
+            android:paddingTop="@dimen/dp_1"
+            android:text="勇士"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_9" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="2 : 2"
+        android:textColor="@color/grey_second"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold" />
+</RelativeLayout>

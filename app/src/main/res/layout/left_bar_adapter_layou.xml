@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/dark_grey">
+
+        <View
+            android:id="@+id/cursor"
+            android:layout_width="@dimen/dp_3"
+            android:layout_height="match_parent"
+            android:background="@color/app_theme_color" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="得分"
+            android:maxLines="1"
+            android:textColor="@color/app_theme_color"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+</RelativeLayout>

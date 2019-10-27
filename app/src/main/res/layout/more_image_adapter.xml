@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_3"
+        android:layout_marginRight="@dimen/dp_3">
+        <com.teach.news10.design.RoundOrCircleImage
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_110"
+            android:scaleType="centerCrop"
+            app:borderRadius="@dimen/dp_3"
+            app:type="round"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/image_view"/>
+    </RelativeLayout>
+
+</RelativeLayout>

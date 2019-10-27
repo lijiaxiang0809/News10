@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10">
+
+        <com.teach.news10.design.RoundOrCircleImage
+            android:id="@+id/round_image"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_80"
+            android:layout_alignParentRight="true"
+            app:borderRadius="@dimen/dp_6"
+            app:type="round" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/round_image"
+            android:maxLines="2"
+            android:textColor="@color/grey_first"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <include layout="@layout/cut_line" />
+</LinearLayout>

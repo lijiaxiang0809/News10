@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/back_grey"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp">
+
+
+    <TextView
+        android:id="@+id/news_detail_edit_comment"
+        style="@style/lib_style_news_detail_bottom_comment_text"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/news_detail_top_share_relative"
+        android:hint="请评论" />
+
+    <LinearLayout
+        android:id="@+id/news_detail_top_share_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <!-- 文章详情页下方的评论数 -->
+        <FrameLayout
+            android:id="@+id/layout_bottom_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_bottom_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/lib_bg_news_bottom_comment" />
+
+            <TextView
+                android:id="@+id/tv_bottom_comment"
+                style="@style/lib_style_news_detail_bottom_comment"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/news_detail_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/lib_selector_collect_feed_news" />
+
+        <ImageView
+            android:id="@+id/news_detail_top_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/lib_icon_share_by_news_bottom" />
+
+        <Button
+            android:id="@+id/news_detail_send_comment"
+            style="@style/Button_ThreadInfoCommentsend"
+            android:text="发表"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</RelativeLayout>

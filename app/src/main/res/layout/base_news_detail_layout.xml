@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <news.lanqiudi.com.news.customs.SimpleCommentsTitleView
+        android:id="@+id/simple_title_view"
+       android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:background="@color/app_theme_color"/>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/view_relativelayout"
+            layout="@layout/common_comment_sth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@+id/simple_title_view"
+        android:orientation="vertical" />
+
+    <FrameLayout
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/simple_title_view"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@id/bottom"
+        android:background="@drawable/bg_bottom_shadow" />
+
+</RelativeLayout>

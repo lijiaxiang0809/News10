@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="@dimen/dp_6">
+
+        <com.teach.news10.design.RoundOrCircleImage
+            android:id="@+id/image_bg"
+            app:borderRadius="@dimen/dp_6"
+            app:type="round"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_80" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/trans_bg_item"
+            android:alpha="0.3"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="#nba季后赛"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="38个帖子了"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_9" />
+    </FrameLayout>
+
+</RelativeLayout>

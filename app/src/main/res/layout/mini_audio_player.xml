@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:id="@+id/audio_player_progress_mini"
+        style="@style/horizonal_progress_green"
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/back_grey">
+
+        <ImageView
+            android:id="@+id/mini_player_play_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/audio_player_play" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/mini_player_play_stop"
+            android:layout_toLeftOf="@+id/action_container"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/mini_player_song_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="随便起个名字"
+                android:textColor="@color/grey_first"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/mini_player_play_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mini_player_song_name"
+                android:text="00:00/00:00"
+                android:textColor="@color/grey_first"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/action_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/mini_player_play_prev"
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/audio_player_prev" />
+            <ImageView
+                android:id="@+id/mini_player_play_next"
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/audio_player_next" />
+
+            <ImageView
+                android:id="@+id/mini_player_play_mode"
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                android:src="@drawable/audio_player_mode_random" />
+
+            <ImageView
+                android:id="@+id/mini_player_play_timer"
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                android:src="@drawable/audio_player_timer" />
+
+            <ImageView
+                android:id="@+id/mini_player_lrc"
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_lrc" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

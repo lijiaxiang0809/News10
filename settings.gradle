@@ -1,0 +1,1 @@
+include ':app',':basepop',':banner',':rxjava',':tuikit',':chat',':takephoto'

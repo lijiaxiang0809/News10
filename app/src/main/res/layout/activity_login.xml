@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.teach.news10.design.CommonTitle
+        android:layout_width="match_parent"
+        app:canBack="true"
+        app:backImage="@drawable/ic_arrow_back"
+        app:titleText="登录"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"/>
+    <com.teach.news10.design.RoundImage
+        android:id="@+id/avarter"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_25"
+        android:onClick="upload"
+        android:src="@drawable/lib_icon_user_empty" />
+
+   <com.teach.news10.design.SmsVerifyView
+       android:id="@+id/sms_verify_view"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登     录"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/dp_10"
+        android:onClick="login"
+        android:layout_marginLeft="@dimen/dp_80"
+        android:layout_marginRight="@dimen/dp_80"
+        android:background="@color/app_theme_color"
+        android:layout_marginTop="@dimen/dp_30"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="第三方账号登录"
+        android:textColor="@color/grey_second"
+        android:textSize="@dimen/sp_12"
+        android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+        android:id="@+id/weichat_login"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/icon_weixin_login" />
+
+        <TextView
+            android:id="@+id/tv_last_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:text="微信"
+            android:textColor="@color/grey_second"
+            android:textSize="@dimen/sp_12"
+            tools:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="faverate_more">关注更多</string>
+    <string name="confirm">确定</string>
+    <string name="commit_error">数据提交是发生错误</string>
+    <string name="press_again_to_exit_process">再按一次退出程序</string>
+    <string name="lay_up_shot">上篮</string>
+    <string name="nav_des">一个纯粹而有爱的篮球世界</string>
+    <string name="login_now">立即登录</string>
+    <string name="my_notify">我的通知</string>
+    <string name="collected_history">收藏/历史</string>
+    <string name="system_message">系统消息</string>
+    <string name="reverse_tell">反馈</string>
+    <string name="setting">设置</string>
+    <string name="first_page">首页</string>
+    <string name="match">比赛</string>
+    <string name="circle">圈子</string>
+    <string name="data">数据</string>
+    <string name="loading">加载中</string>
+    <string name="net_work_error">网络请求发生错误</string>
+    <string name="verify_second">秒后重新发送</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="modify_bind_phone">修改绑定手机</string>
+    <string name="share_comment">分享这条评论</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dont_found_url">未找到有效地址</string>
+    <string name="camera">拍照</string>
+    <string name="jump">跳过</string>
+    <string name="cancel">取消</string>
+    <string name="be_null">信息为空</string>
+    <string name="nick_be_null">昵称或头像为空</string>
+    <string name="confirm_to_use_default_name">确认使用默认用户名</string>
+    <string name="photo">相册</string>
+    <string name="log1">睚眦</string>
+    <string name="log2">饕餮</string>
+    <string name="log3">貔貅</string>
+    <string name="net_disconnected">网络连接已断开</string>
+    <string name="net_connected">已建立网络连接</string>
+    <string name="this_is_a_fuck_null">这里他妈的有个空错</string>
+    <string name="play_in_wifi_environment">只在WiFi环境下自动播放</string>
+    <string name="only_one_season">只有当前赛季数据</string>
+</resources>

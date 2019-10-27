@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.lanqiudi.news10"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]//渠道占位符
+        flavorDimensions "versionCode"
+    }
+    //必须写到buildTypes上边
+    signingConfigs {
+        debug {
+            storeFile file(signKey)
+            storePassword storePwd
+            keyAlias alias
+            keyPassword keyPwd
+        }
+        release {
+            storeFile file(signKey)
+            storePassword storePwd
+            keyAlias alias
+            keyPassword keyPwd
+            v2SigningEnabled false
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+    //声明的渠道
+    productFlavors {
+        defaults {}
+        xiaomi {}
+        vivo {}
+        huawei {}
+        Tencent {}
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName = "News10" + "-" + "${variant.productFlavors[0].name}"+ "-" +buildType.name + "-V" +defaultConfig.versionName + ".apk"
+            outputFileName = fileName
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            failOnVersionConflict()
+            force "com.android.support:support-annotations:$supportVsersion"
+            force "com.android.support:support-compat:$supportVsersion"
+            force "com.android.support:appcompat-v7:$supportVsersion"
+            force "com.android.support:support-v4:$supportVsersion"
+            force "com.android.support:support-core-utils:$supportVsersion"
+            force "com.android.support:support-fragment:$supportVsersion"
+            force "com.squareup.okhttp3:okhttp:$okhttp3"
+            force "io.reactivex.rxjava2:rxjava:$rxjava2"
+            force "io.reactivex.rxjava2:rxandroid:$rxjava2"
+            force "com.google.code.gson:gson:$gson"
+            force "com.github.bumptech.glide:glide:$glide"
+            force 'com.google.auto:auto-common:0.6'
+            force 'io.reactivex:rxjava:1.2.1'
+            force 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+            force 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:cardview-v7:$supportVsersion"
+    implementation "com.android.support:support-v4:$supportVsersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraint"
+    implementation "com.android.support:design:$supportVsersion"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "com.flyco.tablayout:FlycoTabLayout_Lib:$tablayout"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp3"
+    implementation "com.squareup.okhttp3:logging-interceptor:$ok3log"
+    implementation "fm.jiecao:jiecaovideoplayer:$jiecao"
+    implementation 'com.hjq:xxpermissions:5.2'
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanary"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanary"
+    implementation "com.scwang.smartrefresh:SmartRefreshLayout:$smartRefresh"
+    implementation "com.scwang.smartrefresh:SmartRefreshHeader:$smartRefresh"
+    implementation 'org.jsoup:jsoup:1.10.2'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    api "com.jakewharton:butterknife:$butterknife"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife"
+    implementation files('libs/fastjson-1.2.41.jar')
+    implementation files('libs/umeng-common-1.5.3.jar')
+    implementation files('libs/umeng-share-core-6.9.3.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.3.jar')
+    implementation files('libs/umeng-sharetool-6.9.3.jar')
+    implementation 'xstream:xstream:1.2.2'
+    implementation project(':rxjava')
+    implementation project(':basepop')
+    implementation project(':banner')
+    implementation project(':chat')
+    implementation project(':takephoto')
+}

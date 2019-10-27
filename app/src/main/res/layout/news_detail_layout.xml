@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <news.lanqiudi.com.news.customs.CommonTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backImage="@drawable/ic_arrow_back"
+        app:titleText="详情"
+        android:id="@+id/title"
+        app:canBack="true" />
+    <LinearLayout
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="@dimen/dp_50">
+        <TextView
+            android:id="@+id/comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/comment_bg"
+            android:paddingTop="@dimen/dp_2"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/dp_2"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:text="33评论"/>
+    </LinearLayout>
+    <com.github.lzyzsd.jsbridge.BridgeWebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/view_relativelayout"/>
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/view_relativelayout"/>
+    <include
+        android:id="@+id/view_relativelayout"
+        layout="@layout/common_comment_sth"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
